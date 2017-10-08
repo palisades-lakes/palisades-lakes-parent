@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+ xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
  <properties>
   <doclint>none</doclint>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  <clojure-version>1.8.0</clojure-version>
+  <!-- clojure-version>1.8.0</clojure-version -->
+  <clojure-version>1.9.0-beta2</clojure-version>
   <clojure-maven-version>1.8.1</clojure-maven-version>
   <codox-version>0.10.3</codox-version>
   <graph-maven-version>1.2.3</graph-maven-version>
@@ -13,6 +18,7 @@
   <maven-clean-version>3.0.0</maven-clean-version>
   <maven-compiler-version>3.7.0</maven-compiler-version>
   <maven-dependency-version>3.0.2</maven-dependency-version>
+  <maven-enforcer-version>3.0.0-M1</maven-enforcer-version>
   <maven-jar-version>3.0.2</maven-jar-version>
   <maven-javadoc-version>3.0.0-M1</maven-javadoc-version>
   <maven-project-info-reports-version>2.9</maven-project-info-reports-version>
@@ -24,7 +30,7 @@
   <timestamp>${maven.build.timestamp}</timestamp>
   <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
  </properties>
- <!-- Immitating apache commons parent -->
+ <!-- Imitating apache commons parent -->
  <modelVersion>4.0.0</modelVersion>
  <groupId>palisades-lakes</groupId>
  <artifactId>palisades-lakes-parent</artifactId>
@@ -34,9 +40,6 @@
  <description>Parent pom for palisades-lakes projects.</description>
  <url>https://github.com/palisades-lakes/palisades-lakes-parent</url>
  <!-- Maven versions plugin reports an error if this is omitted -->
- <prerequisites>
-  <maven>3.5.0</maven>
- </prerequisites>
  <!-- TODO: <issueManagement> <system>jira</system> <url>http://issues.apache.org/jira/browse/COMMONSSITE</url> 
   </issueManagement> <ciManagement> <system>jenkins</system> <url>https://builds.apache.org/</url> 
   </ciManagement> <mailingLists> <mailingList> <name>Commons User List</name> <subscribe>user-subscribe@commons.apache.org</subscribe> 
@@ -137,6 +140,26 @@
   </pluginManagement>
   <plugins>
    <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-enforcer-plugin</artifactId>
+    <version>${maven-enforcer-version}</version>
+    <executions>
+     <execution>
+      <id>enforce-maven</id>
+      <goals>
+       <goal>enforce</goal>
+      </goals>
+      <configuration>
+       <rules>
+        <requireMavenVersion>
+         <version>[3.5.0,)</version>
+        </requireMavenVersion>
+       </rules>
+      </configuration>
+     </execution>
+    </executions>
+   </plugin>
+   <plugin>
     <groupId>org.kuali.maven.plugins</groupId>
     <artifactId>graph-maven-plugin</artifactId>
     <version>${graph-maven-version}</version>
@@ -181,47 +204,16 @@
      </compilerArgs>
     </configuration>
    </plugin>
-   <!-- plugin>
-    <groupId>com.theoryinpractise</groupId>
-    <artifactId>clojure-maven-plugin</artifactId>
-    <version>${clojure-maven-version}</version>
-    <extensions>true</extensions>
-    <executions>
-     <execution>
-      <id>clojure-compile</id>
-      <phase>compile</phase>
-      <goals>
-       <goal>compile</goal>
-      </goals>
-     </execution>
-     <execution>
-      <id>test-compile</id>
-      <phase>test-compile</phase>
-      <goals>
-       <goal>testCompile</goal>
-      </goals>
-     </execution>
-     <execution>
-      <id>clojure-test</id>
-      <phase>test</phase>
-      <goals>
-       <goal>test</goal>
-      </goals>
-     </execution>
-    </executions>
-    <configuration>
-     <clojureOptions>-Dclojure.compiler.direct-linking=true</clojureOptions>
-     <namespaces>
-      <namespace>!palisades.lakes.bench.doc.*</namespace>
-     </namespaces>
-     <copiedNamespaces>
-      <namespace>!.*</namespace>
-     </copiedNamespaces>
-     <testNamespaces>
-      <namespace>!palisades.lakes.bench.test.*</namespace>
-     </testNamespaces>
-    </configuration>
-   </plugin -->
+   <!-- plugin> <groupId>com.theoryinpractise</groupId> <artifactId>clojure-maven-plugin</artifactId> 
+    <version>${clojure-maven-version}</version> <extensions>true</extensions> <executions> 
+    <execution> <id>clojure-compile</id> <phase>compile</phase> <goals> <goal>compile</goal> 
+    </goals> </execution> <execution> <id>test-compile</id> <phase>test-compile</phase> 
+    <goals> <goal>testCompile</goal> </goals> </execution> <execution> <id>clojure-test</id> 
+    <phase>test</phase> <goals> <goal>test</goal> </goals> </execution> </executions> 
+    <configuration> <clojureOptions>-Dclojure.compiler.direct-linking=true</clojureOptions> 
+    <namespaces> <namespace>!palisades.lakes.bench.doc.*</namespace> </namespaces> <copiedNamespaces> 
+    <namespace>!.*</namespace> </copiedNamespaces> <testNamespaces> <namespace>!palisades.lakes.bench.test.*</namespace> 
+    </testNamespaces> </configuration> </plugin -->
    <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-project-info-reports-plugin</artifactId>
@@ -302,14 +294,6 @@
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-site-plugin</artifactId>
     <version>${maven-site-version}</version>
-    <configuration>
-     <reportPlugins>
-      <plugin>
-       <groupId>org.apache.maven.plugins</groupId>
-       <artifactId>maven-javadoc-plugin</artifactId>
-      </plugin>
-     </reportPlugins>
-    </configuration>
    </plugin>
    <plugin>
     <artifactId>maven-assembly-plugin</artifactId>
@@ -443,5 +427,5 @@
     </exclusion>
    </exclusions>
   </dependency>
-  </dependencies>
+ </dependencies>
 </project>
