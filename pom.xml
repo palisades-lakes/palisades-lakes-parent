@@ -7,7 +7,7 @@
   <clojure-maven-version>1.8.1</clojure-maven-version>
   <codox-version>0.10.3</codox-version>
   <graph-maven-version>1.2.3</graph-maven-version>
-  <java-version>1.8</java-version>
+  <java-version>1.9</java-version>
   <lifecycle-mapping-version>1.0.0</lifecycle-mapping-version>
   <maven-assembly-version>3.1.0</maven-assembly-version>
   <maven-clean-version>3.0.0</maven-clean-version>
@@ -35,7 +35,7 @@
  <url>https://github.com/palisades-lakes/palisades-lakes-parent</url>
  <!-- Maven versions plugin reports an error if this is omitted -->
  <prerequisites>
-  <maven>3.3.9</maven>
+  <maven>3.5.0</maven>
  </prerequisites>
  <!-- TODO: <issueManagement> <system>jira</system> <url>http://issues.apache.org/jira/browse/COMMONSSITE</url> 
   </issueManagement> <ciManagement> <system>jenkins</system> <url>https://builds.apache.org/</url> 
