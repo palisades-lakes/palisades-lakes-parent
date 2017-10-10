@@ -7,6 +7,7 @@
  <properties>
   <doclint>none</doclint>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <asm-version>6.0</asm-version>
   <!-- clojure-version>1.8.0</clojure-version -->
   <clojure-version>1.9.0-beta2</clojure-version>
   <clojure-maven-version>1.8.1</clojure-maven-version>
@@ -25,6 +26,7 @@
   <maven-release-plugin-version>2.5.3</maven-release-plugin-version>
   <maven-scm-plugin-version>1.9.5</maven-scm-plugin-version>
   <maven-site-version>3.6</maven-site-version>
+  <parboiled-java-version>1.1.8</parboiled-java-version>
   <versions-plugin-version>2.3</versions-plugin-version>
   <github-url>scm:git:https://github.com/palisades-lakes/palisades-lakes-parent.git</github-url>
   <timestamp>${maven.build.timestamp}</timestamp>
@@ -405,10 +407,19 @@
    <version>${clojure-version}</version>
   </dependency>
   <dependency>
+   <groupId>org.parboiled</groupId>
+   <artifactId>parboiled-java</artifactId>
+   <version>${parboiled-java-version}</version>
+  </dependency>
+  <dependency>
    <groupId>codox</groupId>
    <artifactId>codox</artifactId>
    <version>${codox-version}</version>
    <exclusions>
+   <exclusion>
+   <groupId>org.parboiled</groupId>
+   <artifactId>parboiled-java</artifactId>
+   </exclusion>
     <exclusion>
      <groupId>org.ow2.asm</groupId>
      <artifactId>asm</artifactId>
