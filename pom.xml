@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
- xmlns="http://maven.apache.org/POM/4.0.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
  <properties>
   <doclint>none</doclint>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -37,7 +33,7 @@
  <groupId>palisades-lakes</groupId>
  <artifactId>palisades-lakes-parent</artifactId>
  <packaging>pom</packaging>
- <version>0.0.9-SNAPSHOT</version>
+ <version>0.0.9</version>
  <name>Palisades Lakes Parent</name>
  <description>Parent pom for palisades-lakes projects.</description>
  <url>https://github.com/palisades-lakes/palisades-lakes-parent</url>
@@ -54,7 +50,7 @@
   <connection>${github-url}</connection>
   <developerConnection>${github-url}</developerConnection>
   <url>${github-url}</url>
-  <tag>HEAD</tag>
+  <tag>palisades-lakes-parent-0.0.9</tag>
  </scm>
  <distributionManagement>
   <repository>
