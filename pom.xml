@@ -30,6 +30,7 @@
   <commons-rng-version>1.0</commons-rng-version>
   <codox-version>0.10.3</codox-version>
   <criterium-version>0.4.4</criterium-version>
+  <eclipse-collections-version>9.0.0</eclipse-collections-version>
   <fastutil-version>8.1.0</fastutil-version>
   <fipp-version>0.6.10</fipp-version>
   <graph-maven-version>1.2.3</graph-maven-version>
