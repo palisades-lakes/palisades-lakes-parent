@@ -32,7 +32,7 @@
   <codox-version>0.10.3</codox-version>
   <criterium-version>0.4.4</criterium-version>
   <eclipse-collections-version>9.0.0</eclipse-collections-version>
-  <exif-processor-versioin>0.2.0</exif-processor-versioin>
+  <exif-processor-version>0.2.0</exif-processor-version>
   <fastutil-version>8.1.0</fastutil-version>
   <fipp-version>0.6.10</fipp-version>
   <graph-maven-version>1.2.3</graph-maven-version>
