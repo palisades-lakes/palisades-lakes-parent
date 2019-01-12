@@ -256,6 +256,7 @@
     <artifactId>maven-clean-plugin</artifactId>
     <version>${maven-clean-version}</version>
     <configuration>
+    <failOnError>false</failOnError>
      <filesets>
       <fileset>
        <directory>lib</directory>
