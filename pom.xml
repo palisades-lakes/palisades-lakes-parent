@@ -188,7 +188,8 @@
     <version>${maven-surefire-version}</version>
     <configuration>
      <trimStackTrace>false</trimStackTrace>
-     <argLine>-Xmx2G -XX:MaxPermSize=512M</argLine>
+     <!-- argLine>-Xmx2G -XX:MaxPermSize=512M</argLine -->
+     <argLine>-Xmx4G -Xms4G</argLine>
     </configuration>
     <dependencies>
      <!-- <dependency> <groupId>org.junit.platform</groupId> <artifactId>junit-platform-surefire-provider</artifactId> 
