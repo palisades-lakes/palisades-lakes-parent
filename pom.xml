@@ -58,12 +58,14 @@
   <maven-clean-version>3.1.0</maven-clean-version>
   <maven-compiler-version>3.8.0</maven-compiler-version>
   <maven-dependency-version>3.1.1</maven-dependency-version>
-  <maven-deploy-plugin-version>3.0.0-M1</maven-deploy-plugin-version>
+  <maven-deploy-plugin-version>3.0.0-M2</maven-deploy-plugin-version>
   <maven-enforcer-version>3.0.0-M2</maven-enforcer-version>
+  <maven-install-plugin-version>3.0.0-M1</maven-install-plugin-version>
   <maven-jar-version>3.1.1</maven-jar-version>
   <maven-javadoc-version>3.1.0</maven-javadoc-version>
   <maven-project-info-reports-version>3.0.0</maven-project-info-reports-version>
   <maven-release-plugin-version>2.5.3</maven-release-plugin-version>
+  <maven-resources-plugin-version>3.1.0</maven-resources-plugin-version>
   <maven-scm-plugin-version>1.11.2</maven-scm-plugin-version>
   <maven-site-version>3.7.1</maven-site-version>
   <maven-source-plugin-version>3.0.1</maven-source-plugin-version>
