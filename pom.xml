@@ -72,7 +72,7 @@
   <maven-surefire-version>3.0.0-M3</maven-surefire-version>
   <metadata-extractor-version>2.11.0</metadata-extractor-version>
   <neanderthal-version>0.22.1</neanderthal-version>
-  <numbers-java-version>1.3</numbers-java-version>
+  <numbers-java-version>1.4.3</numbers-java-version>
   <oshi-version>3.13.3</oshi-version>
   <pandect-version>0.6.1</pandect-version>
   <parboiled-java-version>1.3.0</parboiled-java-version>
