@@ -20,7 +20,7 @@
   <clatrix-version>0.5.0</clatrix-version>
   <!-- clj-digest-version>1.4.10</clj-digest-version -->
   <clj-tuple-version>0.2.2</clj-tuple-version>
-  <clojure-version>1.10.1</clojure-version>
+  <clojure-version>1.10.3</clojure-version>
   <clojure-core-async-version>1.3.610</clojure-core-async-version>
   <clojure-maven-version>1.8.3</clojure-maven-version>
   <clojure.vmargs>-ea -dsa</clojure.vmargs>
