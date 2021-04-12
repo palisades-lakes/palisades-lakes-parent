@@ -15,10 +15,9 @@
   <doclint>none</doclint>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   <apfloat-version>1.9.1</apfloat-version>
-  <asm-version>9.0</asm-version>
+  <asm-version>9.1</asm-version>
   <cheshire-version>5.10.0</cheshire-version>
   <clatrix-version>0.5.0</clatrix-version>
-  <!-- clj-digest-version>1.4.10</clj-digest-version -->
   <clj-tuple-version>0.2.2</clj-tuple-version>
   <clojure-version>1.10.3</clojure-version>
   <clojure-core-async-version>1.3.610</clojure-core-async-version>
@@ -27,29 +26,29 @@
   <clojure.options>-ea -dsa -Dclojure.compiler.direct-linking=true</clojure.options>
   <clojurecl-version>0.15.0</clojurecl-version>
   <commons-compress-version>1.20</commons-compress-version>
-  <commons-lang3-version>3.11</commons-lang3-version>
+  <commons-lang3-version>3.12.0</commons-lang3-version>
   <commons-math3-version>3.6.1</commons-math3-version>
   <commons-rng-version>1.3</commons-rng-version>
   <codox-version>0.10.7</codox-version>
   <criterium-version>0.4.6</criterium-version>
   <doclint>none</doclint>
-  <eclipse-collections-version>10.4.0</eclipse-collections-version>
+  <eclipse-collections-version>11.0.0.M2</eclipse-collections-version>
   <exif-processor-version>0.2.0</exif-processor-version>
-  <fastutil-version>8.4.4</fastutil-version>
+  <fastutil-version>8.5.4</fastutil-version>
   <fipp-version>0.6.23</fipp-version>
   <github-url>scm:git:https://github.com/${project.groupId}/${project.artifactId}.git</github-url>
   <graph-maven-version>1.2.3</graph-maven-version>
-  <guava-version>30.1-jre</guava-version>
+  <guava-version>30.1.1-jre</guava-version>
   <hiccup-version>1.0.5</hiccup-version>
   <hppc-version>0.8.2</hppc-version>
-  <java-version>15</java-version>
+  <java-version>16</java-version>
   <java-sizeof-version>0.0.5</java-sizeof-version>
-  <jgit-version>5.10.0.202012080955-r</jgit-version>
+  <jgit-version>5.11.0.202103091610-r</jgit-version>
   <jcuda-version>11.1.1</jcuda-version>
   <jscience-version>4.3.3</jscience-version>
-  <junit-jupiter-version>5.7.0</junit-jupiter-version>
-  <junit-platform-version>1.7.0</junit-platform-version>
-  <jts-version>1.18.0</jts-version>
+  <junit-jupiter-version>5.7.1</junit-jupiter-version>
+  <junit-platform-version>1.7.1</junit-platform-version>
+  <jts-version>1.18.1</jts-version>
   <lifecycle-mapping-version>1.0.0</lifecycle-mapping-version>
   <maven-assembly-version>3.3.0</maven-assembly-version>
   <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
@@ -70,7 +69,7 @@
   <maven-surefire-version>3.0.0-M5</maven-surefire-version>
   <metadata-extractor-version>2.15.0</metadata-extractor-version>
   <numbers-java-version>1.7.4</numbers-java-version>
-  <oshi-version>5.4.1</oshi-version>
+  <oshi-version>5.7.0</oshi-version>
   <pandect-version>1.0.1</pandect-version>
   <parboiled-java-version>1.3.1</parboiled-java-version>
   <potemkin-version>0.4.5</potemkin-version>
