@@ -190,8 +190,7 @@
     <version>${maven-surefire-version}</version>
     <configuration>
      <trimStackTrace>false</trimStackTrace>
-     <!-- argLine>-Xmx2G -XX:MaxPermSize=512M</argLine -->
-     <argLine>-Xmx4G -Xms4G</argLine>
+     <argLine>-Xmx8G -Xms8G</argLine>
     </configuration>
     <dependencies>
     <!-- 
