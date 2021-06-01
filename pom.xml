@@ -190,7 +190,10 @@
     <version>${maven-surefire-version}</version>
     <configuration>
      <trimStackTrace>false</trimStackTrace>
-     <argLine>-Xmx8G -Xms8G</argLine>
+     <!-- <argLine>-Xmx11G -Xms11G</argLine>  -->
+     <argLine>-Xmx32G -Xms32G</argLine>
+     <!-- <argLine>-XX:+AggressiveOpts -XX:+AggressiveHeap -Xmx48G -Xms48G</argLine> -->
+     <!-- <argLine>-XX:+UseFMA -Xcomp -Xbatch -XX:ObjectAlignmentInBytes=16 -Xmx52G -Xms52G</argLine> -->
     </configuration>
     <dependencies>
     <!-- 
