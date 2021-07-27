@@ -2,7 +2,7 @@
 <project
  xmlns="https://maven.apache.org/POM/4.0.0"
  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+ xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
 >
  <modelVersion>4.0.0</modelVersion>
  <groupId>palisades-lakes</groupId>
@@ -86,13 +86,13 @@
   <xmp-core-version>6.0.6</xmp-core-version>
   <!-- <xmp-core-version>6.1.11</xmp-core-version> -->
  </properties>
- <!-- TODO: <issueManagement> <system>jira</system> <url>http://issues.apache.org/jira/browse/COMMONSSITE</url> 
+ <!-- TODO: <issueManagement> <system>jira</system> <url>https://issues.apache.org/jira/browse/COMMONSSITE</url> 
   </issueManagement> <ciManagement> <system>jenkins</system> <url>https://builds.apache.org/</url> 
   </ciManagement> <mailingLists> <mailingList> <name>Commons User List</name> <subscribe>user-subscribe@commons.apache.org</subscribe> 
   <unsubscribe>user-unsubscribe@commons.apache.org</unsubscribe> <post>user@commons.apache.org</post> 
-  <archive>http://mail-archives.apache.org/mod_mbox/commons-user/</archive> <otherArchives> 
-  <otherArchive>http://www.mail-archive.com/user@commons.apache.org/</otherArchive> 
-  <otherArchive>http://news.gmane.org/gmane.comp.jakarta.commons.user</otherArchive> 
+  <archive>https://mail-archives.apache.org/mod_mbox/commons-user/</archive> <otherArchives> 
+  <otherArchive>https://www.mail-archive.com/user@commons.apache.org/</otherArchive> 
+  <otherArchive>https://news.gmane.org/gmane.comp.jakarta.commons.user</otherArchive> 
   </otherArchives> </mailingList> </mailingLists> -->
  <scm>
   <connection>${github-url}</connection>
