@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project
- xmlns="http://maven.apache.org/POM/4.0.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+ xmlns="https://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 >
  <modelVersion>4.0.0</modelVersion>
  <groupId>palisades-lakes</groupId>
@@ -446,7 +446,7 @@
  <repositories>
   <repository>
    <id>maven2</id>
-   <url>http://repo.maven.apache.org/maven2/</url>
+   <url>https://repo.maven.apache.org/maven2/</url>
    <releases>
     <enabled>true</enabled>
     <updatePolicy>never</updatePolicy>
@@ -459,7 +459,7 @@
   </repository>
   <repository>
    <id>openmind</id>
-   <url>http://repository.openmindonline.it/</url>
+   <url>https://repository.openmindonline.it/</url>
    <releases>
     <enabled>true</enabled>
     <updatePolicy>never</updatePolicy>
@@ -472,7 +472,7 @@
   </repository>
   <repository>
    <id>clojars</id>
-   <url>http://clojars.org/repo</url>
+   <url>https://clojars.org/repo</url>
    <releases>
     <enabled>true</enabled>
     <updatePolicy>never</updatePolicy>
