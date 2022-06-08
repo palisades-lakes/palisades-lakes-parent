@@ -69,7 +69,7 @@
   <maven-site-version>3.11.0</maven-site-version>
   <maven-source-plugin-version>3.2.1</maven-source-plugin-version>
   <maven-surefire-version>3.0.0-M6</maven-surefire-version>
-  <metadata-extractor-version>2.17.0</metadata-extractor-version>
+  <metadata-extractor-version>2.18.0</metadata-extractor-version>
   <numbers-java-version>1.8.2</numbers-java-version>
   <oshi-version>6.1.5</oshi-version>
   <pandect-version>1.0.2</pandect-version>
