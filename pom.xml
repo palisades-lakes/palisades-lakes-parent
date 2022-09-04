@@ -192,7 +192,7 @@
     <configuration>
      <trimStackTrace>false</trimStackTrace>
      <!-- <argLine>-Xmx11G -Xms11G</argLine>  -->
-     <argLine>-Xmx32G -Xms32G</argLine>
+     <argLine>-Xmx32G -Xms32G --enable-preview</argLine>
      <!-- <argLine>-XX:+AggressiveOpts -XX:+AggressiveHeap -Xmx48G -Xms48G</argLine> -->
      <!-- <argLine>-XX:+UseFMA -Xcomp -Xbatch -XX:ObjectAlignmentInBytes=16 -Xmx52G -Xms52G</argLine> -->
     </configuration>
@@ -282,8 +282,10 @@
     <configuration>
      <source>${java-version}</source>
      <target>${java-version}</target>
+     <release>${java-version}</release>
      <compilerArgs>
       <arg>-J-Dclojure.compiler.direct-linking=true</arg>
+      <arg>--enable-preview</arg>
      </compilerArgs>
     </configuration>
    </plugin>
