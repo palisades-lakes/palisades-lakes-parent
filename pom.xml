@@ -43,7 +43,7 @@
   <guava-version>31.1-jre</guava-version>
   <hiccup-version>1.0.5</hiccup-version>
   <hppc-version>0.9.1</hppc-version>
-  <java-version>18</java-version>
+  <java-version>19</java-version>
   <java-sizeof-version>0.0.5</java-sizeof-version>
   <jgit-version>6.2.0.202206071550-r</jgit-version>
   <jcuda-version>11.6.1</jcuda-version>
