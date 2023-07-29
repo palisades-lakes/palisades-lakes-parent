@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
 >
  <modelVersion>4.0.0</modelVersion>
@@ -46,6 +45,7 @@
   <jgit-version>6.6.0.202305301015-r</jgit-version>
   <jcuda-version>11.8.0</jcuda-version>
   <jscience-version>4.3.3</jscience-version>
+  <jsoup-version>1.16.1</jsoup-version>
   <junit-jupiter-version>5.10.0</junit-jupiter-version>
   <junit-platform-version>1.10.0</junit-platform-version>
   <jts-version>1.19.0</jts-version>
@@ -490,6 +490,12 @@
    </dependency> <dependency> <groupId>org.ow2.asm</groupId> <artifactId>asm-analysis</artifactId> 
    <version>${asm-version}</version> </dependency> <dependency> <groupId>org.ow2.asm</groupId> 
    <artifactId>asm-tree</artifactId> <version>${asm-version}</version> </dependency> -->
+  <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+  <dependency>
+   <groupId>org.jsoup</groupId>
+   <artifactId>jsoup</artifactId>
+   <version>${jsoup-version}</version>
+  </dependency>
   <dependency>
    <groupId>org.ow2.asm</groupId>
    <artifactId>asm-util</artifactId>
