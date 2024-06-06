@@ -19,7 +19,7 @@
   <clj-tuple-version>0.2.2</clj-tuple-version>
   <clojure-version>1.11.3</clojure-version>
   <clojure-core-async-version>1.6.681</clojure-core-async-version>
-  <clojure-core-memoize-version>1.0.266</clojure-core-memoize-version>
+  <clojure-core-memoize-version>1.1.266</clojure-core-memoize-version>
   <clojure-math-numeric-tower-version>0.1.0</clojure-math-numeric-tower-version>
   <clojure-maven-version>1.9.2</clojure-maven-version>
   <clojure.vmargs>-ea -dsa</clojure.vmargs>
@@ -77,6 +77,7 @@
   <slf4j-version>2.0.13</slf4j-version>
   <spire_2_12_version>0.17.0</spire_2_12_version>
   <spire_2_13_version>0.18.0</spire_2_13_version>
+  <testng-version>7.10.2</testng-version>
   <timestamp>${maven.build.timestamp}</timestamp>
   <uncommons-maths-version>1.2.3</uncommons-maths-version>
   <versions-maven-plugin-version>2.16.2</versions-maven-plugin-version>
