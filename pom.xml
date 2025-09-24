@@ -201,20 +201,6 @@
           <!-- <argLine>-XX:+AggressiveOpts -XX:+AggressiveHeap -Xmx48G -Xms48G</argLine> -->
           <!-- <argLine>-XX:+UseFMA -Xcomp -Xbatch -XX:ObjectAlignmentInBytes=16 -Xmx52G -Xms52G</argLine> -->
         </configuration>
-        <dependencies>
-          <!--
-          <dependency>
-           <groupId>org.junit.platform</groupId>
-           <artifactId>junit-platform-surefire-provider</artifactId>
-           <version>${junit-platform-version}</version>
-          </dependency>
-           -->
-          <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit-jupiter-version}</version>
-          </dependency>
-        </dependencies>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -349,8 +335,6 @@
         <configuration>
           <additionalJOption>-Xdoclint:none</additionalJOption>
           <outputDirectory>${project.basedir}</outputDirectory>
-          <reportOutputDirectory>${project.basedir}</reportOutputDirectory>
-          <destDir>target/doc/javadoc</destDir>
           <overview>src/main/java/overview.html</overview>
           <show>private</show>
           <quiet>true</quiet>
@@ -421,11 +405,8 @@
           </reportSet>
         </reportSets>
         <configuration>
-          <!-- <destDir>target/site/docs/</destDir> -->
           <additionalJOption>-Xdoclint:none</additionalJOption>
           <outputDirectory>${project.basedir}c</outputDirectory>
-          <reportOutputDirectory>${project.basedir}</reportOutputDirectory>
-          <destDir>target/doc/javadoc</destDir>
           <overview>src/main/java/overview.html</overview>
           <show>private</show>
           <quiet>true</quiet>
@@ -500,87 +481,98 @@
   </repositories>
   <dependencies>
     <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>clojure</artifactId>
-      <version>${clojure-version}</version>
-    </dependency>
-    <!-- <dependency> <groupId>org.ow2.asm</groupId> <artifactId>asm</artifactId> <version>${asm-version}</version>
-     </dependency> <dependency> <groupId>org.ow2.asm</groupId> <artifactId>asm-analysis</artifactId>
-     <version>${asm-version}</version> </dependency> <dependency> <groupId>org.ow2.asm</groupId>
-     <artifactId>asm-tree</artifactId> <version>${asm-version}</version> </dependency> -->
-    <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
-    <dependency>
-      <groupId>org.jsoup</groupId>
-      <artifactId>jsoup</artifactId>
-      <version>${jsoup-version}</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit-jupiter-version}</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.ow2.asm</groupId>
-      <artifactId>asm-util</artifactId>
-      <version>${asm-version}</version>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-launcher</artifactId>
+      <version>${junit-platform-version}</version>
+      <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.parboiled</groupId>
-      <artifactId>parboiled-java</artifactId>
-      <version>${parboiled-java-version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.ow2.asm</groupId>
-          <artifactId>asm</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.ow2.asm</groupId>
-          <artifactId>asm-analysis</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.ow2.asm</groupId>
-          <artifactId>asm-tree</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.ow2.asm</groupId>
-          <artifactId>asm-util</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>codox</groupId>
-      <artifactId>codox</artifactId>
-      <version>${codox-version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.jsoup</groupId>
-          <artifactId>jsoup</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.parboiled</groupId>
-          <artifactId>parboiled-java</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.ow2.asm</groupId>
-          <artifactId>asm</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.ow2.asm</groupId>
-          <artifactId>asm-analysis</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.ow2.asm</groupId>
-          <artifactId>asm-tree</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.ow2.asm</groupId>
-          <artifactId>asm-util</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>org.ow2.asm</groupId>
-          <artifactId>asm-all</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <!-- used to get current branch in codox scripts -->
-    <!-- not used at present -->
-    <!-- <dependency> <groupId>org.eclipse.jgit</groupId> <artifactId>org.eclipse.jgit</artifactId>
-     <version>${jgit-version}</version> <exclusions> <exclusion> <groupId>org.slf4j</groupId>
-     <artifactId>slf4j-api</artifactId> </exclusion> </exclusions> </dependency> -->
-  </dependencies>
-</project>
+  <dependency>
+  <groupId>org.clojure</groupId>
+  <artifactId>clojure</artifactId>
+  <version>${clojure-version}</version>
+</dependency>
+  <!-- <dependency> <groupId>org.ow2.asm</groupId> <artifactId>asm</artifactId> <version>${asm-version}</version>
+   </dependency> <dependency> <groupId>org.ow2.asm</groupId> <artifactId>asm-analysis</artifactId>
+   <version>${asm-version}</version> </dependency> <dependency> <groupId>org.ow2.asm</groupId>
+   <artifactId>asm-tree</artifactId> <version>${asm-version}</version> </dependency> -->
+  <dependency>
+    <groupId>org.jsoup</groupId>
+    <artifactId>jsoup</artifactId>
+    <version>${jsoup-version}</version>
+  </dependency>
+  <dependency>
+    <groupId>org.ow2.asm</groupId>
+    <artifactId>asm-util</artifactId>
+    <version>${asm-version}</version>
+  </dependency>
+  <dependency>
+    <groupId>org.parboiled</groupId>
+    <artifactId>parboiled-java</artifactId>
+    <version>${parboiled-java-version}</version>
+    <exclusions>
+      <exclusion>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm</artifactId>
+      </exclusion>
+      <exclusion>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm-analysis</artifactId>
+      </exclusion>
+      <exclusion>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm-tree</artifactId>
+      </exclusion>
+      <exclusion>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm-util</artifactId>
+      </exclusion>
+    </exclusions>
+  </dependency>
+  <dependency>
+    <groupId>codox</groupId>
+    <artifactId>codox</artifactId>
+    <version>${codox-version}</version>
+    <exclusions>
+      <exclusion>
+        <groupId>org.jsoup</groupId>
+        <artifactId>jsoup</artifactId>
+      </exclusion>
+      <exclusion>
+        <groupId>org.parboiled</groupId>
+        <artifactId>parboiled-java</artifactId>
+      </exclusion>
+      <exclusion>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm</artifactId>
+      </exclusion>
+      <exclusion>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm-analysis</artifactId>
+      </exclusion>
+      <exclusion>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm-tree</artifactId>
+      </exclusion>
+      <exclusion>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm-util</artifactId>
+      </exclusion>
+      <exclusion>
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm-all</artifactId>
+      </exclusion>
+    </exclusions>
+  </dependency>
+  <!-- used to get current branch in codox scripts -->
+  <!-- not used at present -->
+  <!-- <dependency> <groupId>org.eclipse.jgit</groupId> <artifactId>org.eclipse.jgit</artifactId>
+   <version>${jgit-version}</version> <exclusions> <exclusion> <groupId>org.slf4j</groupId>
+   <artifactId>slf4j-api</artifactId> </exclusion> </exclusions> </dependency> -->
+</dependencies>
+    </project>
