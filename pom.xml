@@ -44,7 +44,7 @@
     <!-- hiccup-version>1.0.5</hiccup-version -->
     <hiccup-version>2.0.0</hiccup-version>
     <hppc-version>0.10.0</hppc-version>
-    <java-version>24</java-version>
+    <java-version>25</java-version>
     <java-sizeof-version>0.0.5</java-sizeof-version>
     <jgit-version>7.3.0.202506031305-r</jgit-version>
     <jcuda-version>12.6.0</jcuda-version>
