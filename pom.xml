@@ -18,23 +18,26 @@
     <clatrix-version>0.5.0</clatrix-version>
     <clj-tuple-version>0.2.2</clj-tuple-version>
     <clojure-version>1.12.3</clojure-version>
+    <clojure-combinatorics-version>0.3.0</clojure-combinatorics-version>
     <clojure-core-async-version>1.8.741</clojure-core-async-version>
     <clojure-core-memoize-version>1.1.266</clojure-core-memoize-version>
     <clojure-math-numeric-tower-version>0.1.0</clojure-math-numeric-tower-version>
-    <!-- clojure-maven-version>1.8.3</clojure-maven-version -->
     <clojure-maven-version>1.9.3</clojure-maven-version>
     <clojure.vmargs>-ea -dsa</clojure.vmargs>
     <clojure.option.direct>-Dclojure.compiler.direct-linking=true</clojure.option.direct>
     <clojure.options>-ea -dsa ${clojure.option.direct}</clojure.options>
     <clojurecl-version>0.16.2</clojurecl-version>
     <commons-compress-version>1.28.0</commons-compress-version>
-    <commons-lang3-version>3.18.0</commons-lang3-version>
+    <commons-geometry-version>1.0</commons-geometry-version>
+    <commons-imaging-version>1.0.0-alpha6</commons-imaging-version>
+    <commons-lang3-version>3.20.0</commons-lang3-version>
     <commons-math3-version>3.6.1</commons-math3-version>
     <commons-math4-version>4.0-beta1</commons-math4-version>
     <commons-rng-version>1.6</commons-rng-version>
     <codox-version>0.10.8</codox-version>
     <criterium-version>0.4.6</criterium-version>
     <doclint>none</doclint>
+    <eastwood-version>1.4.3</eastwood-version>
     <eclipse-collections-version>13.0.0</eclipse-collections-version>
     <exif-processor-version>0.4.0</exif-processor-version>
     <fastutil-version>8.5.16</fastutil-version>
