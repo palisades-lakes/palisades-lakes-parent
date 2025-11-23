@@ -16,6 +16,7 @@
     <asm-version>9.8</asm-version>
     <cheshire-version>6.1.0</cheshire-version>
     <clatrix-version>0.5.0</clatrix-version>
+    <clj-http-version>3.13.1</clj-http-version>
     <clj-tuple-version>0.2.2</clj-tuple-version>
     <clojure-version>1.12.3</clojure-version>
     <clojure-combinatorics-version>0.3.0</clojure-combinatorics-version>
@@ -27,6 +28,7 @@
     <clojure.option.direct>-Dclojure.compiler.direct-linking=true</clojure.option.direct>
     <clojure.options>-ea -dsa ${clojure.option.direct}</clojure.options>
     <clojurecl-version>0.16.2</clojurecl-version>
+    <commons-codec-version>1.20.0</commons-codec-version>
     <commons-compress-version>1.28.0</commons-compress-version>
     <commons-geometry-version>1.0</commons-geometry-version>
     <commons-imaging-version>1.0.0-alpha6</commons-imaging-version>
