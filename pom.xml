@@ -7,7 +7,7 @@
   <packaging>pom</packaging>
   <groupId>palisades-lakes</groupId>
   <artifactId>palisades-lakes-parent</artifactId>
-  <version>0.0.11-SNAPSHOT</version>
+  <version>0.0.11</version>
   <name>Palisades Lakes parent project</name>
   <properties>
     <doclint>none</doclint>
