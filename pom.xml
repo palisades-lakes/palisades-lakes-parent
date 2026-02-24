@@ -23,10 +23,12 @@
     <clojure-core-async-version>1.8.741</clojure-core-async-version>
     <clojure-core-memoize-version>1.1.273</clojure-core-memoize-version>
     <clojure-data-json-version>2.5.2</clojure-data-json-version>
-    <clojure-math-numeric-tower-version>0.1.1</clojure-math-numeric-tower-version>
+    <clojure-math-numeric-tower-version>0.1.1
+    </clojure-math-numeric-tower-version>
     <clojure-maven-version>1.9.3</clojure-maven-version>
     <clojure.vmargs>-ea -dsa</clojure.vmargs>
-    <clojure.option.direct>-Dclojure.compiler.direct-linking=true</clojure.option.direct>
+    <clojure.option.direct>-Dclojure.compiler.direct-linking=true
+    </clojure.option.direct>
     <clojure.options>-ea -dsa ${clojure.option.direct}</clojure.options>
     <clojurecl-version>0.16.2</clojurecl-version>
     <commons-codec-version>1.21.0</commons-codec-version>
@@ -47,7 +49,9 @@
     <fastutil-version>8.5.18</fastutil-version>
     <fipp-version>0.6.29</fipp-version>
     <generateme-fastmath-version>2.4.0</generateme-fastmath-version>
-    <github-url>scm:git:https://github.com/${project.groupId}/${project.artifactId}.git</github-url>
+    <github-url>
+      scm:git:https://github.com/${project.groupId}/${project.artifactId}.git
+    </github-url>
     <graph-maven-version>1.2.3</graph-maven-version>
     <guava-version>33.5.0-jre</guava-version>
     <!-- hiccup-version>1.0.5</hiccup-version -->
@@ -67,7 +71,8 @@
     <lwjgl.version>3.4.1</lwjgl.version>
     <lwjgl.natives>natives-windows</lwjgl.natives>
     <maven-assembly-version>3.8.0</maven-assembly-version>
-    <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+    <maven.build.timestamp.format>yyyy-MM-dd HH:mm
+    </maven.build.timestamp.format>
     <maven.compiler.source>25</maven.compiler.source>
     <maven.compiler.target>25</maven.compiler.target>
     <maven-clean-version>3.5.0</maven-clean-version>
@@ -78,7 +83,8 @@
     <maven-install-plugin-version>3.1.4</maven-install-plugin-version>
     <maven-jar-version>3.5.0</maven-jar-version>
     <maven-javadoc-version>3.12.0</maven-javadoc-version>
-    <maven-project-info-reports-version>3.9.0</maven-project-info-reports-version>
+    <maven-project-info-reports-version>3.9.0
+    </maven-project-info-reports-version>
     <maven-release-plugin-version>3.3.1</maven-release-plugin-version>
     <maven-resources-plugin-version>3.4.0</maven-resources-plugin-version>
     <maven-scm-plugin-version>2.2.1</maven-scm-plugin-version>
@@ -332,7 +338,6 @@
               <overWriteSnapshots>true</overWriteSnapshots>
               <overWriteIfNewer>true</overWriteIfNewer>
               <!-- fileSeparator>/</fileSeparator -->
-              <silent>true</silent>
             </configuration>
           </execution>
         </executions>
@@ -345,8 +350,10 @@
           <outputDirectory>lib</outputDirectory>
           <archive>
             <manifest>
-              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+              <addDefaultImplementationEntries>true
+              </addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true
+              </addDefaultSpecificationEntries>
             </manifest>
           </archive>
         </configuration>
@@ -479,8 +486,12 @@
       <id>osgeo</id>
       <name>OSGeo Release Repository</name>
       <url>https://repo.osgeo.org/repository/release/</url>
-      <snapshots><enabled>false</enabled></snapshots>
-      <releases><enabled>true</enabled></releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
     </repository>
     <!-- <repository>
       <id>osgeo-snapshot</id>
