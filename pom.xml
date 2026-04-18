@@ -9,24 +9,25 @@
   <artifactId>palisades-lakes-parent</artifactId>
   <version>0.0.11</version>
   <name>Palisades Lakes parent project</name>
+  <!-- versions updated 2026-04-18 -->
   <properties>
     <doclint>none</doclint>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <apfloat-version>1.15.0</apfloat-version>
+    <apfloat-version>1.16.0</apfloat-version>
     <asm-version>9.9.1</asm-version>
-    <cheshire-version>6.1.0</cheshire-version>
+    <cheshire-version>6.2.0</cheshire-version>
     <clatrix-version>0.5.0</clatrix-version>
     <clj-http-version>3.13.1</clj-http-version>
     <clj-tuple-version>0.2.2</clj-tuple-version>
     <clojure-version>1.12.4</clojure-version>
     <clojure-combinatorics-version>0.3.2</clojure-combinatorics-version>
-    <clojure-core-async-version>1.8.741</clojure-core-async-version>
-    <clojure-core-memoize-version>1.1.273</clojure-core-memoize-version>
+    <clojure-core-async-version>1.9.865</clojure-core-async-version>
+    <clojure-core-memoize-version>1.2.281</clojure-core-memoize-version>
     <clojure-data-json-version>2.5.2</clojure-data-json-version>
     <clojure-math-numeric-tower-version>0.1.1
     </clojure-math-numeric-tower-version>
     <clojure-maven-version>1.9.3</clojure-maven-version>
-    <clojure.vmargs>-ea -dsa</clojure.vmargs>
+    <clojure.vmargs>-ea -dsa </clojure.vmargs>
     <clojure.option.direct>-Dclojure.compiler.direct-linking=true
     </clojure.option.direct>
     <clojure.options>-ea -dsa ${clojure.option.direct}</clojure.options>
@@ -40,12 +41,14 @@
     <commons-math3-version>3.6.1</commons-math3-version>
     <commons-math4-version>4.0-beta1</commons-math4-version>
     <commons-rng-version>1.6</commons-rng-version>
+    <commons-text-version>1.15.0</commons-text-version>
     <codox-version>0.10.8</codox-version>
     <criterium-version>0.4.6</criterium-version>
     <doclint>none</doclint>
     <eastwood-version>1.4.3</eastwood-version>
     <eclipse-collections-version>13.0.0</eclipse-collections-version>
     <exif-processor-version>0.4.0</exif-processor-version>
+    <fasterxml-jackson-version>3.1.2</fasterxml-jackson-version>
     <fastutil-version>8.5.18</fastutil-version>
     <fipp-version>0.6.29</fipp-version>
     <generateme-fastmath-version>2.4.0</generateme-fastmath-version>
@@ -60,12 +63,13 @@
     <imageio-ext-version>2.0.1</imageio-ext-version>
     <java-version>25</java-version>
     <java-sizeof-version>0.0.5</java-sizeof-version>
-    <jgit-version>7.5.0.202512021534-r</jgit-version>
+    <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
+    <jgit-version>7.6.0.202603022253-r</jgit-version>
     <jcuda-version>12.6.0</jcuda-version>
     <jscience-version>4.3.3</jscience-version>
     <jsoup-version>1.22.1</jsoup-version>
-    <junit-jupiter-version>6.0.2</junit-jupiter-version>
-    <junit-platform-version>6.0.2</junit-platform-version>
+    <junit-jupiter-version>6.0.3</junit-jupiter-version>
+    <junit-platform-version>6.0.3</junit-platform-version>
     <jts-version>1.20.0</jts-version>
     <lifecycle-mapping-version>1.0.0</lifecycle-mapping-version>
     <lwjgl.version>3.4.1</lwjgl.version>
@@ -83,32 +87,32 @@
     <maven-install-plugin-version>3.1.4</maven-install-plugin-version>
     <maven-jar-version>3.5.0</maven-jar-version>
     <maven-javadoc-version>3.12.0</maven-javadoc-version>
-    <maven-project-info-reports-version>3.9.0
-    </maven-project-info-reports-version>
+    <maven-project-info-reports-version>3.9.0</maven-project-info-reports-version>
     <maven-release-plugin-version>3.3.1</maven-release-plugin-version>
-    <maven-resources-plugin-version>3.4.0</maven-resources-plugin-version>
+    <maven-resources-plugin-version>3.5.0</maven-resources-plugin-version>
     <maven-scm-plugin-version>2.2.1</maven-scm-plugin-version>
-    <maven-shade-plugin-version>3.6.1</maven-shade-plugin-version>
+    <maven-shade-plugin-version>3.6.2</maven-shade-plugin-version>
     <maven-site-version>4.0.0-M16</maven-site-version>
     <maven-source-plugin-version>3.4.0</maven-source-plugin-version>
-    <maven-surefire-version>3.5.4</maven-surefire-version>
+    <maven-surefire-version>3.5.5</maven-surefire-version>
     <metadata-extractor-version>2.19.0</metadata-extractor-version>
     <numbers-java-version>1.8.2</numbers-java-version>
-    <oshi-version>6.9.3</oshi-version>
+    <oshi-version>6.11.1</oshi-version>
     <pandect-version>1.0.2</pandect-version>
     <parboiled-java-version>1.4.1</parboiled-java-version>
     <potemkin-version>0.4.9</potemkin-version>
-    <rhino-version>1.9.0</rhino-version>
+    <rhino-version>1.9.1</rhino-version>
     <slf4j-version>2.0.17</slf4j-version>
     <spire_2_12_version>0.17.0</spire_2_12_version>
     <spire_2_13_version>0.18.0</spire_2_13_version>
     <spire_3_version>0.18.0</spire_3_version>
     <testng-version>7.12.0</testng-version>
     <timestamp>${maven.build.timestamp}</timestamp>
+    <tinfour-version>2.1.9</tinfour-version>
     <uncommons-maths-version>1.2.3</uncommons-maths-version>
     <versions-maven-plugin-version>2.21.0</versions-maven-plugin-version>
     <!-- TODO: test all 6.x versions -->
-    <xmp-core-version>6.1.11</xmp-core-version>
+    <xmpcore-version>6.1.11</xmpcore-version>
   </properties>
   <!-- TODO:
   <issueManagement>
@@ -242,7 +246,6 @@
         <artifactId>maven-deploy-plugin</artifactId>
         <version>${maven-deploy-plugin-version}</version>
       </plugin>
-      <!-- Source: https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-source-plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
@@ -310,6 +313,7 @@
           <source>${java-version}</source>
           <target>${java-version}</target>
           <release>${java-version}</release>
+          <showDeprecation>false</showDeprecation>
           <compilerArgs>
             <arg>-J${clojure.option.direct}</arg>
             <arg>--enable-preview</arg>
@@ -350,10 +354,8 @@
           <outputDirectory>lib</outputDirectory>
           <archive>
             <manifest>
-              <addDefaultImplementationEntries>true
-              </addDefaultImplementationEntries>
-              <addDefaultSpecificationEntries>true
-              </addDefaultSpecificationEntries>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
             </manifest>
           </archive>
         </configuration>
@@ -467,7 +469,6 @@
       -->
     </plugins>
   </reporting>
-
   <repositories>
     <repository>
       <id>maven2</id>
@@ -501,19 +502,19 @@
       <releases><enabled>false</enabled></releases>
     </repository>
     -->
-    <repository>
-      <id>openmind</id>
-      <url>https://repository.openmindonline.it/</url>
-      <releases>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-        <updatePolicy>never</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-      </snapshots>
-    </repository>
+<!--    <repository>-->
+<!--      <id>openmind</id>-->
+<!--      <url>https://repository.openmindonline.it/</url>-->
+<!--      <releases>-->
+<!--        <enabled>true</enabled>-->
+<!--        <updatePolicy>never</updatePolicy>-->
+<!--      </releases>-->
+<!--      <snapshots>-->
+<!--        <enabled>false</enabled>-->
+<!--        <updatePolicy>never</updatePolicy>-->
+<!--        <checksumPolicy>fail</checksumPolicy>-->
+<!--      </snapshots>-->
+<!--    </repository>-->
     <repository>
       <id>clojars</id>
       <url>https://clojars.org/repo</url>
