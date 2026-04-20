@@ -48,7 +48,8 @@
     <eastwood-version>1.4.3</eastwood-version>
     <eclipse-collections-version>13.0.0</eclipse-collections-version>
     <exif-processor-version>0.4.0</exif-processor-version>
-    <fasterxml-jackson-version>3.1.2</fasterxml-jackson-version>
+<!--    <fasterxml-jackson-version>3.1.2</fasterxml-jackson-version>-->
+    <fasterxml-jackson-version>2.21.2</fasterxml-jackson-version>
     <fastutil-version>8.5.18</fastutil-version>
     <fipp-version>0.6.29</fipp-version>
     <generateme-fastmath-version>2.4.0</generateme-fastmath-version>
