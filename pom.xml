@@ -9,7 +9,6 @@
   <artifactId>palisades-lakes-parent</artifactId>
   <version>0.0.11</version>
   <name>Palisades Lakes parent project</name>
-  <!-- versions updated 2026-04-18 -->
   <properties>
     <doclint>none</doclint>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,7 +26,7 @@
     <clojure-math-numeric-tower-version>0.1.1
     </clojure-math-numeric-tower-version>
     <clojure-maven-version>1.9.3</clojure-maven-version>
-    <clojure.vmargs>-ea -dsa </clojure.vmargs>
+    <clojure.vmargs>-ea -dsa</clojure.vmargs>
     <clojure.option.direct>-Dclojure.compiler.direct-linking=true
     </clojure.option.direct>
     <clojure.options>-ea -dsa ${clojure.option.direct}</clojure.options>
@@ -48,7 +47,7 @@
     <eastwood-version>1.4.3</eastwood-version>
     <eclipse-collections-version>13.0.0</eclipse-collections-version>
     <exif-processor-version>0.4.0</exif-processor-version>
-<!--    <fasterxml-jackson-version>3.1.2</fasterxml-jackson-version>-->
+    <!--    <fasterxml-jackson-version>3.1.2</fasterxml-jackson-version>-->
     <fasterxml-jackson-version>2.21.2</fasterxml-jackson-version>
     <fastutil-version>8.5.18</fastutil-version>
     <fipp-version>0.6.29</fipp-version>
@@ -58,16 +57,11 @@
     </github-url>
     <graph-maven-version>1.2.3</graph-maven-version>
     <guava-version>33.5.0-jre</guava-version>
-    <!-- hiccup-version>1.0.5</hiccup-version -->
     <hiccup-version>2.0.0</hiccup-version>
     <hppc-version>0.10.0</hppc-version>
     <imageio-ext-version>2.0.1</imageio-ext-version>
     <java-version>25</java-version>
-    <java-sizeof-version>0.0.5</java-sizeof-version>
-    <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
-    <jgit-version>7.6.0.202603022253-r</jgit-version>
-    <jcuda-version>12.6.0</jcuda-version>
-    <jscience-version>4.3.3</jscience-version>
+    <jmh.version>1.37</jmh.version>
     <jsoup-version>1.22.1</jsoup-version>
     <junit-jupiter-version>6.0.3</junit-jupiter-version>
     <junit-platform-version>6.0.3</junit-platform-version>
@@ -76,8 +70,7 @@
     <lwjgl.version>3.4.1</lwjgl.version>
     <lwjgl.natives>natives-windows</lwjgl.natives>
     <maven-assembly-version>3.8.0</maven-assembly-version>
-    <maven.build.timestamp.format>yyyy-MM-dd HH:mm
-    </maven.build.timestamp.format>
+    <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
     <maven.compiler.source>25</maven.compiler.source>
     <maven.compiler.target>25</maven.compiler.target>
     <maven-clean-version>3.5.0</maven-clean-version>
@@ -88,7 +81,8 @@
     <maven-install-plugin-version>3.1.4</maven-install-plugin-version>
     <maven-jar-version>3.5.0</maven-jar-version>
     <maven-javadoc-version>3.12.0</maven-javadoc-version>
-    <maven-project-info-reports-version>3.9.0</maven-project-info-reports-version>
+    <maven-project-info-reports-version>3.9.0
+    </maven-project-info-reports-version>
     <maven-release-plugin-version>3.3.1</maven-release-plugin-version>
     <maven-resources-plugin-version>3.5.0</maven-resources-plugin-version>
     <maven-scm-plugin-version>2.2.1</maven-scm-plugin-version>
@@ -104,6 +98,8 @@
     <potemkin-version>0.4.9</potemkin-version>
     <rhino-version>1.9.1</rhino-version>
     <slf4j-version>2.0.17</slf4j-version>
+    <scala3-library-version>3.8.3</scala3-library-version>
+    <scala-library-version>3.8.3</scala-library-version>
     <spire_2_12_version>0.17.0</spire_2_12_version>
     <spire_2_13_version>0.18.0</spire_2_13_version>
     <spire_3_version>0.18.0</spire_3_version>
@@ -355,8 +351,10 @@
           <outputDirectory>lib</outputDirectory>
           <archive>
             <manifest>
-              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+              <addDefaultImplementationEntries>true
+              </addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true
+              </addDefaultSpecificationEntries>
             </manifest>
           </archive>
         </configuration>
@@ -503,19 +501,19 @@
       <releases><enabled>false</enabled></releases>
     </repository>
     -->
-<!--    <repository>-->
-<!--      <id>openmind</id>-->
-<!--      <url>https://repository.openmindonline.it/</url>-->
-<!--      <releases>-->
-<!--        <enabled>true</enabled>-->
-<!--        <updatePolicy>never</updatePolicy>-->
-<!--      </releases>-->
-<!--      <snapshots>-->
-<!--        <enabled>false</enabled>-->
-<!--        <updatePolicy>never</updatePolicy>-->
-<!--        <checksumPolicy>fail</checksumPolicy>-->
-<!--      </snapshots>-->
-<!--    </repository>-->
+    <!--    <repository>-->
+    <!--      <id>openmind</id>-->
+    <!--      <url>https://repository.openmindonline.it/</url>-->
+    <!--      <releases>-->
+    <!--        <enabled>true</enabled>-->
+    <!--        <updatePolicy>never</updatePolicy>-->
+    <!--      </releases>-->
+    <!--      <snapshots>-->
+    <!--        <enabled>false</enabled>-->
+    <!--        <updatePolicy>never</updatePolicy>-->
+    <!--        <checksumPolicy>fail</checksumPolicy>-->
+    <!--      </snapshots>-->
+    <!--    </repository>-->
     <repository>
       <id>clojars</id>
       <url>https://clojars.org/repo</url>
@@ -561,84 +559,84 @@
      </dependency> <dependency> <groupId>org.ow2.asm</groupId> <artifactId>asm-analysis</artifactId>
      <version>${asm-version}</version> </dependency> <dependency> <groupId>org.ow2.asm</groupId>
      <artifactId>asm-tree</artifactId> <version>${asm-version}</version> </dependency> -->
-<!--    <dependency>-->
-<!--      <groupId>org.jsoup</groupId>-->
-<!--      <artifactId>jsoup</artifactId>-->
-<!--      <version>${jsoup-version}</version>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.ow2.asm</groupId>-->
-<!--      <artifactId>asm-util</artifactId>-->
-<!--      <version>${asm-version}</version>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.parboiled</groupId>-->
-<!--      <artifactId>parboiled-java</artifactId>-->
-<!--      <version>${parboiled-java-version}</version>-->
-<!--      <exclusions>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.ow2.asm</groupId>-->
-<!--          <artifactId>asm</artifactId>-->
-<!--        </exclusion>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.ow2.asm</groupId>-->
-<!--          <artifactId>asm-analysis</artifactId>-->
-<!--        </exclusion>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.ow2.asm</groupId>-->
-<!--          <artifactId>asm-tree</artifactId>-->
-<!--        </exclusion>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.ow2.asm</groupId>-->
-<!--          <artifactId>asm-util</artifactId>-->
-<!--        </exclusion>-->
-<!--      </exclusions>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.mozilla</groupId>-->
-<!--      <artifactId>rhino</artifactId>-->
-<!--      <version>${rhino-version}</version>-->
-<!--      <scope>compile</scope>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>codox</groupId>-->
-<!--      <artifactId>codox</artifactId>-->
-<!--      <version>${codox-version}</version>-->
-<!--      <exclusions>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.mozilla</groupId>-->
-<!--          <artifactId>rhino</artifactId>-->
-<!--        </exclusion>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.jsoup</groupId>-->
-<!--          <artifactId>jsoup</artifactId>-->
-<!--        </exclusion>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.parboiled</groupId>-->
-<!--          <artifactId>parboiled-java</artifactId>-->
-<!--        </exclusion>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.ow2.asm</groupId>-->
-<!--          <artifactId>asm</artifactId>-->
-<!--        </exclusion>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.ow2.asm</groupId>-->
-<!--          <artifactId>asm-analysis</artifactId>-->
-<!--        </exclusion>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.ow2.asm</groupId>-->
-<!--          <artifactId>asm-tree</artifactId>-->
-<!--        </exclusion>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.ow2.asm</groupId>-->
-<!--          <artifactId>asm-util</artifactId>-->
-<!--        </exclusion>-->
-<!--        <exclusion>-->
-<!--          <groupId>org.ow2.asm</groupId>-->
-<!--          <artifactId>asm-all</artifactId>-->
-<!--        </exclusion>-->
-<!--      </exclusions>-->
-<!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.jsoup</groupId>-->
+    <!--      <artifactId>jsoup</artifactId>-->
+    <!--      <version>${jsoup-version}</version>-->
+    <!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.ow2.asm</groupId>-->
+    <!--      <artifactId>asm-util</artifactId>-->
+    <!--      <version>${asm-version}</version>-->
+    <!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.parboiled</groupId>-->
+    <!--      <artifactId>parboiled-java</artifactId>-->
+    <!--      <version>${parboiled-java-version}</version>-->
+    <!--      <exclusions>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.ow2.asm</groupId>-->
+    <!--          <artifactId>asm</artifactId>-->
+    <!--        </exclusion>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.ow2.asm</groupId>-->
+    <!--          <artifactId>asm-analysis</artifactId>-->
+    <!--        </exclusion>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.ow2.asm</groupId>-->
+    <!--          <artifactId>asm-tree</artifactId>-->
+    <!--        </exclusion>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.ow2.asm</groupId>-->
+    <!--          <artifactId>asm-util</artifactId>-->
+    <!--        </exclusion>-->
+    <!--      </exclusions>-->
+    <!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>org.mozilla</groupId>-->
+    <!--      <artifactId>rhino</artifactId>-->
+    <!--      <version>${rhino-version}</version>-->
+    <!--      <scope>compile</scope>-->
+    <!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>codox</groupId>-->
+    <!--      <artifactId>codox</artifactId>-->
+    <!--      <version>${codox-version}</version>-->
+    <!--      <exclusions>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.mozilla</groupId>-->
+    <!--          <artifactId>rhino</artifactId>-->
+    <!--        </exclusion>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.jsoup</groupId>-->
+    <!--          <artifactId>jsoup</artifactId>-->
+    <!--        </exclusion>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.parboiled</groupId>-->
+    <!--          <artifactId>parboiled-java</artifactId>-->
+    <!--        </exclusion>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.ow2.asm</groupId>-->
+    <!--          <artifactId>asm</artifactId>-->
+    <!--        </exclusion>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.ow2.asm</groupId>-->
+    <!--          <artifactId>asm-analysis</artifactId>-->
+    <!--        </exclusion>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.ow2.asm</groupId>-->
+    <!--          <artifactId>asm-tree</artifactId>-->
+    <!--        </exclusion>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.ow2.asm</groupId>-->
+    <!--          <artifactId>asm-util</artifactId>-->
+    <!--        </exclusion>-->
+    <!--        <exclusion>-->
+    <!--          <groupId>org.ow2.asm</groupId>-->
+    <!--          <artifactId>asm-all</artifactId>-->
+    <!--        </exclusion>-->
+    <!--      </exclusions>-->
+    <!--    </dependency>-->
     <!-- used to get current branch in codox scripts -->
     <!-- not used at present -->
     <!-- <dependency> <groupId>org.eclipse.jgit</groupId> <artifactId>org.eclipse.jgit</artifactId>
