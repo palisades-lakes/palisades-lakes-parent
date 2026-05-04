@@ -27,8 +27,7 @@
     </clojure-math-numeric-tower-version>
     <clojure-maven-version>1.9.3</clojure-maven-version>
     <clojure.vmargs>-ea -dsa</clojure.vmargs>
-    <clojure.option.direct>-Dclojure.compiler.direct-linking=true
-    </clojure.option.direct>
+    <clojure.option.direct>-Dclojure.compiler.direct-linking=true</clojure.option.direct>
     <clojure.options>-ea -dsa ${clojure.option.direct}</clojure.options>
     <clojurecl-version>0.16.2</clojurecl-version>
     <commons-codec-version>1.21.0</commons-codec-version>
@@ -46,6 +45,7 @@
     <doclint>none</doclint>
     <eastwood-version>1.4.3</eastwood-version>
     <eclipse-collections-version>13.0.0</eclipse-collections-version>
+    <exec-maven-plugin-version>3.6.3</exec-maven-plugin-version>
     <exif-processor-version>0.4.0</exif-processor-version>
     <!--    <fasterxml-jackson-version>3.1.2</fasterxml-jackson-version>-->
     <fasterxml-jackson-version>2.21.2</fasterxml-jackson-version>
@@ -106,6 +106,7 @@
     <testng-version>7.12.0</testng-version>
     <timestamp>${maven.build.timestamp}</timestamp>
     <tinfour-version>2.1.9</tinfour-version>
+    <uberjar.name>benchmarks</uberjar.name>
     <uncommons-maths-version>1.2.3</uncommons-maths-version>
     <versions-maven-plugin-version>2.21.0</versions-maven-plugin-version>
     <!-- TODO: test all 6.x versions -->
@@ -233,7 +234,7 @@
         <configuration>
           <trimStackTrace>false</trimStackTrace>
           <!-- <argLine>-Xmx11G -Xms11G</argLine>  -->
-          <argLine>-Xmx32G -Xms32G --enable-preview</argLine>
+          <argLine>-Xmx32G -Xms32G --enable-preview --sun-misc-unsafe-memory-access=allow --illegal-native-access=allow</argLine>
           <!-- <argLine>-XX:+AggressiveOpts -XX:+AggressiveHeap -Xmx48G -Xms48G</argLine> -->
           <!-- <argLine>-XX:+UseFMA -Xcomp -Xbatch -XX:ObjectAlignmentInBytes=16 -Xmx52G -Xms52G</argLine> -->
         </configuration>
