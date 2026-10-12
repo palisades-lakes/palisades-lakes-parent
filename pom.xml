@@ -18,7 +18,7 @@
     <clatrix-version>0.5.0</clatrix-version>
     <clj-http-version>3.13.1</clj-http-version>
     <clj-tuple-version>0.2.2</clj-tuple-version>
-    <clojure-version>1.12.4</clojure-version>
+    <clojure-version>1.12.6</clojure-version>
     <clojure-combinatorics-version>0.3.2</clojure-combinatorics-version>
     <clojure-core-async-version>1.9.865</clojure-core-async-version>
     <clojure-core-memoize-version>1.2.281</clojure-core-memoize-version>
@@ -60,7 +60,7 @@
     <guava-version>33.5.0-jre</guava-version>
     <hiccup-version>2.0.0</hiccup-version>
     <hppc-version>0.10.0</hppc-version>
-    <imageio-ext-version>2.0.1</imageio-ext-version>
+    <imageio-ext-version>2.1.1</imageio-ext-version>
     <java-version>25</java-version>
     <jmh.version>1.37</jmh.version>
     <jsoup-version>1.22.1</jsoup-version>
