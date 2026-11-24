@@ -7,7 +7,7 @@
   <packaging>pom</packaging>
   <groupId>palisades-lakes</groupId>
   <artifactId>palisades-lakes-parent</artifactId>
-  <version>0.0.11</version>
+  <version>0.0.25</version>
   <name>Palisades Lakes parent project</name>
   <properties>
     <doclint>none</doclint>
@@ -28,7 +28,9 @@
     <clojure-maven-version>1.9.4</clojure-maven-version>
     <clojure.vmargs>-ea -dsa</clojure.vmargs>
     <clojure.option.direct>-Dclojure.compiler.direct-linking=true</clojure.option.direct>
-    <clojure.options>-ea -dsa ${clojure.option.direct}</clojure.options>
+    <!-- TODO: find a safer way of serializing values of (fn [...] ...) -->
+    <clojure.serizable.fns>-Dclojure.serializable.fns=true</clojure.serizable.fns>
+    <clojure.options>-ea -dsa ${clojure.option.direct} ${clojure.serizable.fns}</clojure.options>
     <clojurecl-version>0.16.4</clojurecl-version>
     <commons-codec-version>1.23.0</commons-codec-version>
     <commons-compress-version>1.28.0</commons-compress-version>
@@ -57,15 +59,22 @@
       scm:git:https://github.com/${project.groupId}/${project.artifactId}.git
     </github-url>
     <geotools-version>34.3</geotools-version>
+    <!-- <geotools-version>35.2</geotools-version> -->
     <graph-maven-version>1.2.3</graph-maven-version>
     <guava-version>33.8.0-jre</guava-version>
     <hiccup-version>2.0.0</hiccup-version>
     <hppc-version>0.13.0</hppc-version>
-    <imageio-ext-version>2.1.3</imageio-ext-version>
-    <java-version>27</java-version>
-    <javafx-version>27.0.1.1</javafx-version>
+    <imageio-ext-version>2.1.jam</imageio-ext-version>
+    <java-version>25</java-version>
+    <java-sizeof-version>0.0.5</java-sizeof-version>
+    <javafx-version>25.0.5.1</javafx-version>
     <javafx-maven-version>0.0.8</javafx-maven-version>
+    <javax-measure-version>2.2</javax-measure-version>
+    <jcuda-version>12.6.0</jcuda-version>
+    <jgit-version>7.5.0.202512021534-r</jgit-version>
     <jmh.version>1.37</jmh.version>
+    <jscience-version>4.3.3</jscience-version>
+    <jspecify-version>1.0.1</jspecify-version>
     <jsoup-version>1.24.1</jsoup-version>
     <junit-jupiter-version>6.1.3</junit-jupiter-version>
     <junit-platform-version>6.1.3</junit-platform-version>
@@ -75,11 +84,11 @@
     <lwjgl.natives>natives-windows</lwjgl.natives>
     <maven-assembly-version>3.8.0</maven-assembly-version>
     <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-    <maven.compiler.release>27</maven.compiler.release>
-    <maven.compiler.source>27</maven.compiler.source>
-    <maven.compiler.target>27</maven.compiler.target>
+    <maven.compiler.release>25</maven.compiler.release>
+    <maven.compiler.source>25</maven.compiler.source>
+    <maven.compiler.target>25</maven.compiler.target>
     <maven-clean-version>3.5.0</maven-clean-version>
-    <maven-compiler-version>3.16.0</maven-compiler-version>
+    <maven-compiler-plugin-version>3.16.0</maven-compiler-plugin-version>
     <maven-dependency-version>3.11.0</maven-dependency-version>
     <maven-deploy-plugin-version>3.2.0</maven-deploy-plugin-version>
     <maven.deploy.skip>true</maven.deploy.skip>
@@ -120,26 +129,6 @@
     <!-- TODO: test all 6.x versions -->
     <xmpcore-version>6.1.11</xmpcore-version>
   </properties>
-  <!-- TODO:
-  <issueManagement>
-    <system>jira</system>
-    <url>https://issues.apache.org/jira/browse/COMMONSSITE</url>
-  </issueManagement>
-  <ciManagement>
-    <system>jenkins</system>
-    <url>https://builds.apache.org/</url>
-  </ciManagement>
-  <mailingLists>
-    <mailingList>
-      <name>Commons User List</name>
-      <subscribe>user-subscribe@commons.apache.org</subscribe>
-      <unsubscribe>user-unsubscribe@commons.apache.org</unsubscribe>
-      <post>user@commons.apache.org</post>
-      <archive>https://mail-archives.apache.org/mod_mbox/commons-user/</archive> <otherArchives>
-      <otherArchive>https://www.mail-archive.com/user@commons.apache.org/</otherArchive>
-      <otherArchive>https://news.gmane.org/gmane.comp.jakarta.commons.user</otherArchive>
-    </otherArchives> </mailingList> </mailingLists>
-  -->
   <scm>
     <connection>${github-url}</connection>
     <developerConnection>${github-url}</developerConnection>
@@ -183,6 +172,13 @@
             <connectionType>developerConnection</connectionType>
           </configuration>
           -->
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${maven-resources-plugin-version}</version>
+          <configuration>
+            <propertiesEncoding>UTF-8</propertiesEncoding>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -314,7 +310,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven-compiler-version}</version>
+        <version>${maven-compiler-plugin-version}</version>
         <configuration>
           <source>${java-version}</source>
           <target>${java-version}</target>
@@ -347,7 +343,6 @@
               <overWriteReleases>false</overWriteReleases>
               <overWriteSnapshots>true</overWriteSnapshots>
               <overWriteIfNewer>true</overWriteIfNewer>
-              <!-- fileSeparator>/</fileSeparator -->
             </configuration>
           </execution>
         </executions>
@@ -410,10 +405,9 @@
         <configuration>
           <descriptors>
             <descriptor>src/assembly/src.xml</descriptor>
-            <!-- <descriptor>src/assembly/data.xml</descriptor>
+            <descriptor>src/assembly/data.xml</descriptor>
             <descriptor>src/assembly/docs.xml</descriptor>
             <descriptor>src/assembly/libs.xml</descriptor>
-            -->
           </descriptors>
         </configuration>
         <executions>
@@ -425,6 +419,13 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>${maven-resources-plugin-version}</version>
+        <configuration>
+          <propertiesEncoding>UTF-8</propertiesEncoding>
+        </configuration>
       </plugin>
     </plugins>
   </build>
@@ -547,18 +548,62 @@
     -->
   </repositories>
   <dependencies>
+
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>${junit-jupiter-version}</version>
-      <scope>test</scope>
+      <groupId>org.jspecify</groupId>
+      <artifactId>jspecify</artifactId>
+      <version>${jspecify-version}</version>
     </dependency>
+
     <dependency>
       <groupId>org.junit.platform</groupId>
       <artifactId>junit-platform-launcher</artifactId>
       <version>${junit-platform-version}</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.jspecify</groupId>
+          <artifactId>jspecify</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit-jupiter-version}</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.jspecify</groupId>
+          <artifactId>jspecify</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>${junit-jupiter-version}</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.jspecify</groupId>
+          <artifactId>jspecify</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit-jupiter-version}</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.jspecify</groupId>
+          <artifactId>jspecify</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>clojure</artifactId>
